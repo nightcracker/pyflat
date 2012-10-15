@@ -1,5 +1,9 @@
-import os.path
+import os
+
 from ctypes import *
+
+if os.name == "nt":
+    from ctypes.wintypes import *
 
 glfwdll = cdll.LoadLibrary(os.path.join(os.path.dirname(os.path.abspath(__file__)), "bin/glfw3.dll"))
 
@@ -513,8 +517,14 @@ ExtensionSupported = glfwdll.glfwExtensionSupported
 ExtensionSupported.restype = c_int
 ExtensionSupported.argtypes = [c_char_p]
 GetProcAddress = glfwdll.glfwGetProcAddress
-GetProcAddress.restype = glproc
+GetProcAddress.restype = c_void_p
 GetProcAddress.argtypes = [c_char_p]
 CopyContext = glfwdll.glfwCopyContext
 CopyContext.restype = None
 CopyContext.argtypes = [window, window, c_ulong]
+
+# native extensions
+if os.name == "nt":
+    GetWin32Window = glfwdll.glfwGetWin32Window
+    GetWin32Window.restype = HWND
+    GetWin32Window.argtypes = [window]

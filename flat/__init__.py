@@ -1,7 +1,20 @@
-from __future__ import print_function
+from __future__ import print_function, division
 
 import ctypes
 import sys
+import os
+import time
+import signal
+
+# we use C callbacks and all kinds of nasty stuff
+# make keyboard interrupts sane again
+signal.signal(signal.SIGINT, lambda signal, frame: sys.exit(0))
+
+if os.name == "nt":
+    timerfunc = time.clock
+else:
+    timerfunc = time.time
+
 
 from . import _glfw
 
@@ -16,6 +29,9 @@ _open_windows = []
 
 # list containing a list of windows that must be closed when all events are polled
 _close_queue = []
+
+# a bool indicating whether the main thread is running
+_main_thread_running = False
 
 
 # initialise GLFW
@@ -37,7 +53,7 @@ def _close_callback(window):
     
     
 def _refresh_callback(window):
-    Window._from_handle(window).event.dispatch("on_draw")
+    Window._from_handle(window)._try_to_draw()
     
     
 def _focus_callback(window, has_focus):
@@ -50,6 +66,14 @@ def _focus_callback(window, has_focus):
         window.event.dispatch("on_focus")
     else:
         window.event.dispatch("on_blur")
+    
+    
+def _iconify_callback(window, is_iconified):
+    if is_iconified:
+        Window._from_handle(window).event.dispatch("on_iconify")
+    else:
+        Window._from_handle(window).event.dispatch("on_restore")
+    
     
 def _key_callback(window, key, downup):
     if key < 256:
@@ -77,6 +101,9 @@ _glfw.SetWindowRefreshCallback(_refresh_callback.c_callback)
 _focus_callback.c_callback = _glfw.windowfocusfun(_focus_callback)
 _glfw.SetWindowFocusCallback(_focus_callback.c_callback)
 
+_iconify_callback.c_callback = _glfw.windowiconifyfun(_iconify_callback)
+_glfw.SetWindowIconifyCallback(_iconify_callback.c_callback)
+
 _key_callback.c_callback = _glfw.keyfun(_key_callback)
 _glfw.SetKeyCallback(_key_callback.c_callback)
 
@@ -90,19 +117,43 @@ class _WindowEvent(object):
     def __init__(self, window):
         self._window = window
         self._default_handlers = {"on_close": window._on_close}
-        self._event_stack = [{}]
+        self.event_stack = [{}]
         
     def dispatch(self, event_name, *args, **kwargs):
         if event_name not in self._event_types:
             raise RuntimeError("unknown event: " + str(event_name))
             
-        default_func = lambda *args, **kwargs: False
+        # don't dispatch on closed window
+        if not self._window._open:
+            return
+            
+        # if we are about to dispatch an on_draw event, make this window the active window
+        if event_name == "on_draw":
+            _glfw.MakeContextCurrent(self._window._wnd)
         
-        for handlers in reversed(self._event_stack):
-            if handlers.get(event_name, default_func)(self._window, *args, **kwargs):
+        # go over the event stack (top-to-bottom)
+        for handlers in reversed(self.event_stack):
+            try:
+                handler = handlers[event_name]
+            except KeyError:
+                continue
+                
+            # if handler returns True stop handling event
+            if handler(self._window, *args, **kwargs):
                 break
+                
+        # if we haven't stopped yet, call the default handler
         else:
-            self._default_handlers.get(event_name, default_func)(*args, **kwargs)
+            try:
+                default_handler = self._default_handlers[event_name]
+            except KeyError:
+                pass
+            else:
+                default_handler(*args, **kwargs)
+        
+        # if we just dispatched an on_draw event, swap the buffers
+        if event_name == "on_draw":
+            _glfw.SwapBuffers(self._window._wnd)
             
             
     def push_handlers(self, handlers = {}, **kwargs):
@@ -112,19 +163,19 @@ class _WindowEvent(object):
             if event_name not in self._event_types:
                 raise RuntimeError("unknown event: " + str(event_name))
         
-        self._event_stack.append(handlers)
+        self.event_stack.append(handlers)
         
         
     def pop_handlers(self):
-        return self._event_stack.pop()
+        return self.event_stack.pop()
         
     # syntactic sugar
     def __setattr__(self, name, value):
         if name in self._event_types:
-            self._event_stack[-1][name] = value
+            self.event_stack[-1][name] = value
         else:
             # detect accidents, like assigning on_key_down while the correct event is on_key_press
-            if name.startswith("on"):
+            if name.startswith("on_"):
                 raise AttributeError("no event named " + name)
                 
             object.__setattr__(self, name, value)
@@ -132,7 +183,7 @@ class _WindowEvent(object):
         
     def __getattr__(self, name):
         if name in self._event_types:
-            return self._event_stack[-1][name]
+            return self.event_stack[-1][name]
         else:
             raise AttributeError
         
@@ -165,8 +216,12 @@ class Window(object):
         
         self.event = _WindowEvent(self)
         
+        self._last_draw = 0
+        self._max_fps = 60
+        
         self.position = (pos_x, pos_y)
         self.show()
+        
         
     def _has_focus(self):
         return bool(_glfw.glfwGetWindowParam(_glfw.ACTIVE))
@@ -240,18 +295,86 @@ class Window(object):
     # default event handlers
     def _on_close(self):
         self.close()
-
-def run():
-    global _close_queue, _polling_events
+        
+    def _make_current(self):
+        _glfw.MakeContextCurrent(self._window)
+        
+    # this function will dispatch the on_draw event
+    # but no more often than max_fps allows
+    def _try_to_draw(self):
+        now = timerfunc()
+        dt = now - self._last_draw
+        
+        if dt >= (1 / self._max_fps):
+            self._last_draw = now
+            self.event.dispatch("on_draw")
     
+    # returns how long this window can sleep without getting under the max fps
+    def _can_sleep_for(self):
+        now = timerfunc()
+        
+        return max(0, self._last_draw + 1 / self._max_fps - now)
+        
+# this is a thread that spams GLFW with WM_PAINT messages
+# this keeps us responsive during dragging, etc
+def _stay_responsive_hack():
+    # the reason we don't close this when all windows are gone is because this runs in a secondary thread
+    # this means that if the user closes and re-opens a window in an event this *could* possibly close
+    # that'd be a very pesky and hard to find bug
+    while _main_thread_running:
+        # send WM_PAINT message to each window, to wake GLFW up
+        for window in _open_windows:
+            ctypes.windll.user32.SendMessageA(_glfw.GetWin32Window(window._wnd), 0x000F, 0, 0)
+            
+        # get the maximum allowed sleep time (which actually is the *minimum* of all possible sleeping time) and sleep
+        if _open_windows:
+            now = timerfunc()
+            max_sleep_time = min(window._can_sleep_for() for window in _open_windows)
+            
+            time.sleep(max_sleep_time)
+        
+# this starts the main event loop
+# effort has been done to keep this responsive under all circumstances
+# this task might seem easy, but actually is very non-trivial, so pyflat uses
+# a strict callback model with the main loop in pyflat
+def run():
+    global _close_queue, _polling_events, _main_thread_running
+    
+    _main_thread_running = True
+    
+    if os.name == "nt":
+        import threading
+        
+        stay_responsive_thread = threading.Thread(target=_stay_responsive_hack)
+        stay_responsive_thread.start()
+    
+    # close the event loop if we have no windows left
     while _open_windows:
+        # handle input
         _polling_events = True
         _glfw.PollEvents()
         _polling_events = False
         
+        # close windows in GLFW that are already closed on the Python level
         for window in _close_queue:
             _glfw.DestroyWindow(window._wnd)
-        
         _close_queue = []
-
+        
+        # allow windows to draw
+        for window in _open_windows:
+            window._try_to_draw()
+            
+        # get the maximum allowed sleep time (which actually is the _minimum_ of all sleeping time)
+        if _open_windows:
+            now = timerfunc()
+            max_sleep_time = min(window._can_sleep_for() for window in _open_windows)
+            
+            time.sleep(max_sleep_time)
+        
+    _main_thread_running = False
+            
+        
+        
+# import submodules
 from . import key
+from . import gl
