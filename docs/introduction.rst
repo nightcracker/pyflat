@@ -18,3 +18,15 @@ This means pyflat is not:
  - a full-flexed rendering library
  
 These features aren't included in pyflat because they aren't useful, they aren't because they're out of scope.
+
+Features
+--------
+ - window opening and input handling
+ - texture, font and sound handling
+ - drawing of 2D primitives
+ - full control using OpenGL
+ - tools for performant sprites and particle systems
+ 
+Technologies used
+-----------------
+ - ctypes
