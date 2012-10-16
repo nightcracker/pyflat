@@ -6,10 +6,18 @@
 Welcome to pyflat's documentation!
 ==================================
 
+pyflat is a Python library for the creation of hardware-accelerated 2D interactive applications such as games and animations.
+
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+    introduction
+    
+Modules:
+
+.. toctree::
+    pyflat
+    pyflat.key
 
 
 
@@ -19,4 +27,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
