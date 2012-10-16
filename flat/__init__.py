@@ -315,6 +315,7 @@ class Window(object):
         
         return max(0, self._last_draw + 1 / self._max_fps - now)
         
+        
 # this is a thread that spams GLFW with WM_PAINT messages
 # this keeps us responsive during dragging, etc
 def _stay_responsive_hack():
@@ -333,10 +334,11 @@ def _stay_responsive_hack():
             
             time.sleep(max_sleep_time)
         
-# this starts the main event loop
-# effort has been done to keep this responsive under all circumstances
-# this task might seem easy, but actually is very non-trivial, so pyflat uses
-# a strict callback model with the main loop in pyflat
+    
+# This starts the main event loop.
+# Effort has been done to keep this responsive under all circumstances, while sleeping at any time possible,
+# to free up resources. This task might seem easy, but actually is very non-trivial, so pyflat uses
+# a strict callback model with the main loop in pyflat.
 def run():
     global _close_queue, _polling_events, _main_thread_running
     
