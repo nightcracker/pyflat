@@ -1,0 +1,21 @@
+﻿Build started 29-10-2012 16:34:50.
+     1>Project "C:\programming\python\pyflat\c\zlib-1.2.7\build\example.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "example.dir\Release\example.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         All outputs are up-to-date.
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\programming\python\pyflat\c\zlib-1.2.7\build\Release\example.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib Release\zlib.lib /MANIFEST /ManifestFile:"example.dir\Release\example.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:/programming/python/pyflat/c/zlib-1.2.7/build/Release/example.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/programming/python/pyflat/c/zlib-1.2.7/build/Release/example.lib" /MACHINE:X86 example.dir\Release\example.obj  /machine:X86 
+         example.vcxproj -> C:\programming\python\pyflat\c\zlib-1.2.7\build\Release\example.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\programming\python\pyflat\c\zlib-1.2.7\build\Release\example.exe;#1" /manifest example.dir\Release\example.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "example.dir\Release\example.unsuccessfulbuild".
+         Touching "example.dir\Release\example.lastbuildstate".
+     1>Done Building Project "C:\programming\python\pyflat\c\zlib-1.2.7\build\example.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.27

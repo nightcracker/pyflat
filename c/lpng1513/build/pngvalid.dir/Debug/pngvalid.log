@@ -1,0 +1,29 @@
+﻿Build started 29-10-2012 16:40:58.
+     1>Project "C:\programming\python\pyflat\c\lpng1513\build\pngvalid.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "pngvalid.dir\Debug\pngvalid.unsuccessfulbuild".
+       CustomBuild:
+         All outputs are up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:/programming/python/pyflat/c/zlib-1.2.7" /IC:/programming/python/pyflat/c/lpng1513/build /IC:/programming/python/pyflat/c/lpng1513 /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D PNG_CONFIGURE_LIBPNG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"pngvalid.dir\Debug\\" /Fd"C:/programming/python/pyflat/c/lpng1513/build/Debug/pngvalid.pdb" /Gd /TC /analyze- /errorReport:prompt ..\contrib\libtests\pngvalid.c  /Zm1000 
+         pngvalid.c
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"pngvalid.dir\Debug\pngvalid.exe.embed.manifest.res" pngvalid.dir\Debug\pngvalid_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\programming\python\pyflat\c\lpng1513\build\Debug\pngvalid.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib Debug\libpng15d.lib "C:\programming\python\pyflat\c\zlib-1.2.7\build\Release\zlib.lib" /MANIFEST /ManifestFile:"pngvalid.dir\Debug\pngvalid.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/programming/python/pyflat/c/lpng1513/build/Debug/pngvalid.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/programming/python/pyflat/c/lpng1513/build/Debug/pngvalid.lib" /MACHINE:X86 pngvalid.dir\Debug\pngvalid.exe.embed.manifest.res
+         pngvalid.dir\Debug\pngvalid.obj  /machine:X86 /debug 
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"pngvalid.dir\Debug\pngvalid.exe.embed.manifest" /manifest pngvalid.dir\Debug\pngvalid.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"pngvalid.dir\Debug\pngvalid.exe.embed.manifest.res" pngvalid.dir\Debug\pngvalid_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\programming\python\pyflat\c\lpng1513\build\Debug\pngvalid.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib Debug\libpng15d.lib "C:\programming\python\pyflat\c\zlib-1.2.7\build\Release\zlib.lib" /MANIFEST /ManifestFile:"pngvalid.dir\Debug\pngvalid.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/programming/python/pyflat/c/lpng1513/build/Debug/pngvalid.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/programming/python/pyflat/c/lpng1513/build/Debug/pngvalid.lib" /MACHINE:X86 pngvalid.dir\Debug\pngvalid.exe.embed.manifest.res
+         pngvalid.dir\Debug\pngvalid.obj  /machine:X86 /debug 
+         pngvalid.vcxproj -> C:\programming\python\pyflat\c\lpng1513\build\Debug\pngvalid.exe
+       FinalizeBuildStatus:
+         Deleting file "pngvalid.dir\Debug\pngvalid.unsuccessfulbuild".
+         Touching "pngvalid.dir\Debug\pngvalid.lastbuildstate".
+     1>Done Building Project "C:\programming\python\pyflat\c\lpng1513\build\pngvalid.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.81

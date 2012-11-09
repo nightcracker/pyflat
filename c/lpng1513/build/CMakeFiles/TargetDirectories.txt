@@ -1,0 +1,6 @@
+C:/programming/python/pyflat/c/lpng1513/build/CMakeFiles/ALL_BUILD.dir
+C:/programming/python/pyflat/c/lpng1513/build/CMakeFiles/ZERO_CHECK.dir
+C:/programming/python/pyflat/c/lpng1513/build/CMakeFiles/png15.dir
+C:/programming/python/pyflat/c/lpng1513/build/CMakeFiles/png15_static.dir
+C:/programming/python/pyflat/c/lpng1513/build/CMakeFiles/pngtest.dir
+C:/programming/python/pyflat/c/lpng1513/build/CMakeFiles/pngvalid.dir

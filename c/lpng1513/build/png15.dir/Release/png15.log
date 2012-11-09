@@ -1,0 +1,53 @@
+﻿Build started 29-10-2012 16:49:35.
+     1>Project "C:\programming\python\pyflat\c\lpng1513\build\png15.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "png15.dir\Release\png15.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         All outputs are up-to-date.
+       ClCompile:
+         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:/programming/python/pyflat/c/zlib-1.2.7" /IC:/programming/python/pyflat/c/lpng1513/build /IC:/programming/python/pyflat/c/lpng1513 /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D PNG_CONFIGURE_LIBPNG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Release\"" /D PNG_BUILD_DLL /D _WINDLL /D _MBCS /Gm- /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"png15.dir\Release\\" /Fd"C:/programming/python/pyflat/c/lpng1513/build/Release/libpng15.pdb" /Gd /TC /analyze- /errorReport:prompt ..\png.c ..\pngerror.c ..\pngget.c ..\pngmem.c ..\pngpread.c ..\pngread.c ..\pngrio.c ..\pngrtran.c ..\pngrutil.c ..\pngset.c ..\pngtrans.c ..\pngwio.c ..\pngwrite.c ..\pngwtran.c ..\pngwutil.c  /Zm1000 
+         png.c
+         pngerror.c
+         pngget.c
+         pngmem.c
+         pngpread.c
+         pngread.c
+         pngrio.c
+         pngrtran.c
+         pngrutil.c
+         pngset.c
+         pngtrans.c
+         pngwio.c
+         pngwrite.c
+         pngwtran.c
+         pngwutil.c
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\programming\python\pyflat\c\lpng1513\build\Release\libpng15.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\programming\python\pyflat\c\zlib-1.2.7\build\Release\zlib.lib" /MANIFEST /ManifestFile:"png15.dir\Release\libpng15.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:/programming/python/pyflat/c/lpng1513/build/Release/libpng15.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/programming/python/pyflat/c/lpng1513/build/Release/libpng15.lib" /MACHINE:X86 /DLL png15.dir\Release\png.obj
+         png15.dir\Release\pngerror.obj
+         png15.dir\Release\pngget.obj
+         png15.dir\Release\pngmem.obj
+         png15.dir\Release\pngpread.obj
+         png15.dir\Release\pngread.obj
+         png15.dir\Release\pngrio.obj
+         png15.dir\Release\pngrtran.obj
+         png15.dir\Release\pngrutil.obj
+         png15.dir\Release\pngset.obj
+         png15.dir\Release\pngtrans.obj
+         png15.dir\Release\pngwio.obj
+         png15.dir\Release\pngwrite.obj
+         png15.dir\Release\pngwtran.obj
+         png15.dir\Release\pngwutil.obj  /machine:X86 
+            Creating library C:/programming/python/pyflat/c/lpng1513/build/Release/libpng15.lib and object C:/programming/python/pyflat/c/lpng1513/build/Release/libpng15.exp
+         png15.vcxproj -> C:\programming\python\pyflat\c\lpng1513\build\Release\libpng15.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\programming\python\pyflat\c\lpng1513\build\Release\libpng15.dll;#2" /manifest png15.dir\Release\libpng15.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "png15.dir\Release\png15.unsuccessfulbuild".
+         Touching "png15.dir\Release\png15.lastbuildstate".
+     1>Done Building Project "C:\programming\python\pyflat\c\lpng1513\build\png15.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.08

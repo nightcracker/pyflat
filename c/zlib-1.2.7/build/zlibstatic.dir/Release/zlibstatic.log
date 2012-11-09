@@ -1,0 +1,54 @@
+﻿Build started 29-10-2012 16:34:09.
+     1>Project "C:\programming\python\pyflat\c\zlib-1.2.7\build\zlibstatic.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "zlibstatic.dir\Release\zlibstatic.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Building Custom Rule C:/programming/python/pyflat/c/zlib-1.2.7/CMakeLists.txt
+         CMake does not need to re-run because C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:/programming/python/pyflat/c/zlib-1.2.7" /I"C:/programming/python/pyflat/c/zlib-1.2.7/build" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D NO_FSEEKO /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"zlibstatic.dir\Release\\" /Fd"C:/programming/python/pyflat/c/zlib-1.2.7/build/Release/zlibstatic.pdb" /Gd /TC /analyze- /errorReport:prompt ..\adler32.c ..\compress.c ..\crc32.c ..\deflate.c ..\gzclose.c ..\gzlib.c ..\gzread.c ..\gzwrite.c ..\inflate.c ..\infback.c ..\inftrees.c ..\inffast.c ..\trees.c ..\uncompr.c ..\zutil.c  /Zm1000 
+         adler32.c
+         compress.c
+         crc32.c
+         deflate.c
+         gzclose.c
+         gzlib.c
+         gzread.c
+         gzwrite.c
+         inflate.c
+         infback.c
+         inftrees.c
+         inffast.c
+         trees.c
+         uncompr.c
+         zutil.c
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D WIN32 /D _WINDOWS /D NDEBUG /D NO_FSEEKO /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D "CMAKE_INTDIR=\\\"Release\\\"" /l"0x0409" /I"C:/programming/python/pyflat/c/zlib-1.2.7" /I"C:/programming/python/pyflat/c/zlib-1.2.7/build" /nologo /fo"zlibstatic.dir\Release\zlib1.res" ..\win32\zlib1.rc 
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\programming\python\pyflat\c\zlib-1.2.7\build\Release\zlibstatic.lib" /NOLOGO zlibstatic.dir\Release\zlib1.res
+         zlibstatic.dir\Release\adler32.obj
+         zlibstatic.dir\Release\compress.obj
+         zlibstatic.dir\Release\crc32.obj
+         zlibstatic.dir\Release\deflate.obj
+         zlibstatic.dir\Release\gzclose.obj
+         zlibstatic.dir\Release\gzlib.obj
+         zlibstatic.dir\Release\gzread.obj
+         zlibstatic.dir\Release\gzwrite.obj
+         zlibstatic.dir\Release\inflate.obj
+         zlibstatic.dir\Release\infback.obj
+         zlibstatic.dir\Release\inftrees.obj
+         zlibstatic.dir\Release\inffast.obj
+         zlibstatic.dir\Release\trees.obj
+         zlibstatic.dir\Release\uncompr.obj
+         zlibstatic.dir\Release\zutil.obj
+     1>LINK : warning LNK4068: /MACHINE not specified; defaulting to X86
+         zlibstatic.vcxproj -> C:\programming\python\pyflat\c\zlib-1.2.7\build\Release\zlibstatic.lib
+       FinalizeBuildStatus:
+         Deleting file "zlibstatic.dir\Release\zlibstatic.unsuccessfulbuild".
+         Touching "zlibstatic.dir\Release\zlibstatic.lastbuildstate".
+     1>Done Building Project "C:\programming\python\pyflat\c\zlib-1.2.7\build\zlibstatic.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.92

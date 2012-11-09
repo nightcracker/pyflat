@@ -1,0 +1,171 @@
+Determining size of off64_t failed with the following output:
+Change Dir: C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec12260324.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 28-10-2012 20:04:23.
+Project "C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec12260324.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec12260324.dir\Debug\".
+  Creating directory "C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec12260324.dir\Debug\cmTryCompileExec12260324.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _LARGEFILE64_SOURCE=1 /D HAVE_SYS_TYPES_H /D HAVE_STDINT_H /D HAVE_STDDEF_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec12260324.dir\Debug\\" /Fd"C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec12260324.pdb" /Gd /TC /analyze- /errorReport:queue ..\CheckTypeSize\OFF64_T.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _LARGEFILE64_SOURCE=1 /D HAVE_SYS_TYPES_H /D HAVE_STDINT_H /D HAVE_STDDEF_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec12260324.dir\Debug\\" /Fd"C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec12260324.pdb" /Gd /TC /analyze- /errorReport:queue ..\CheckTypeSize\OFF64_T.c  /Zm1000 
+  OFF64_T.c
+  
+..\CheckTypeSize\OFF64_T.c(19): error C2065: 'off64_t' : undeclared identifier [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec12260324.vcxproj]
+..\CheckTypeSize\OFF64_T.c(20): error C2065: 'off64_t' : undeclared identifier [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec12260324.vcxproj]
+..\CheckTypeSize\OFF64_T.c(21): error C2065: 'off64_t' : undeclared identifier [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec12260324.vcxproj]
+..\CheckTypeSize\OFF64_T.c(22): error C2065: 'off64_t' : undeclared identifier [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec12260324.vcxproj]
+..\CheckTypeSize\OFF64_T.c(23): error C2065: 'off64_t' : undeclared identifier [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec12260324.vcxproj]
+Done Building Project "C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec12260324.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec12260324.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  ..\CheckTypeSize\OFF64_T.c(19): error C2065: 'off64_t' : undeclared identifier [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec12260324.vcxproj]
+  ..\CheckTypeSize\OFF64_T.c(20): error C2065: 'off64_t' : undeclared identifier [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec12260324.vcxproj]
+  ..\CheckTypeSize\OFF64_T.c(21): error C2065: 'off64_t' : undeclared identifier [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec12260324.vcxproj]
+  ..\CheckTypeSize\OFF64_T.c(22): error C2065: 'off64_t' : undeclared identifier [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec12260324.vcxproj]
+  ..\CheckTypeSize\OFF64_T.c(23): error C2065: 'off64_t' : undeclared identifier [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec12260324.vcxproj]
+
+    0 Warning(s)
+    5 Error(s)
+
+Time Elapsed 00:00:00.18
+
+C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/CheckTypeSize/OFF64_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(off64_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function fseeko exists failed with the following output:
+Change Dir: C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec834492309.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 28-10-2012 20:04:23.
+Project "C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec834492309.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec834492309.dir\Debug\".
+  Creating directory "C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec834492309.dir\Debug\cmTryCompileExec834492309.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec834492309.dir\Debug\\" /Fd"C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec834492309.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec834492309.dir\Debug\\" /Fd"C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec834492309.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+  CheckFunctionExists.c
+  
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec834492309.dir\Debug\cmTryCompileExec834492309.exe.embed.manifest.res" cmTryCompileExec834492309.dir\Debug\cmTryCompileExec834492309_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec834492309.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec834492309.dir\Debug\cmTryCompileExec834492309.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec834492309.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec834492309.lib" /MACHINE:X86 cmTryCompileExec834492309.dir\Debug\cmTryCompileExec834492309.exe.embed.manifest.res
+  cmTryCompileExec834492309.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol _fseeko referenced in function _main [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec834492309.vcxproj]
+C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec834492309.exe : fatal error LNK1120: 1 unresolved externals [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec834492309.vcxproj]
+Done Building Project "C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec834492309.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec834492309.vcxproj" (default target) (1) ->
+(Link target) -> 
+  CheckFunctionExists.obj : error LNK2019: unresolved external symbol _fseeko referenced in function _main [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec834492309.vcxproj]
+  C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec834492309.exe : fatal error LNK1120: 1 unresolved externals [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec834492309.vcxproj]
+
+    0 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:00.32
+
+
+Determining if the include file unistd.h exists failed with the following output:
+Change Dir: C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec3176503051.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 28-10-2012 20:04:24.
+Project "C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec3176503051.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec3176503051.dir\Debug\".
+  Creating directory "C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec3176503051.dir\Debug\cmTryCompileExec3176503051.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3176503051.dir\Debug\\" /Fd"C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3176503051.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3176503051.dir\Debug\\" /Fd"C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3176503051.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+  
+  CheckIncludeFile.c
+CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec3176503051.vcxproj]
+Done Building Project "C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec3176503051.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec3176503051.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\CMakeTmp\cmTryCompileExec3176503051.vcxproj]
+
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.17
+
+

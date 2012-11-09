@@ -1,0 +1,6 @@
+C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/ALL_BUILD.dir
+C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/ZERO_CHECK.dir
+C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/example.dir
+C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/minigzip.dir
+C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/zlib.dir
+C:/programming/python/pyflat/c/zlib-1.2.7/build/CMakeFiles/zlibstatic.dir

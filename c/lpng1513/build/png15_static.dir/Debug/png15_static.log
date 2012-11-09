@@ -1,0 +1,49 @@
+﻿Build started 29-10-2012 16:40:52.
+     1>Project "C:\programming\python\pyflat\c\lpng1513\build\png15_static.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "png15_static.dir\Debug\png15_static.unsuccessfulbuild".
+       CustomBuild:
+         All outputs are up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:/programming/python/pyflat/c/zlib-1.2.7" /IC:/programming/python/pyflat/c/lpng1513/build /IC:/programming/python/pyflat/c/lpng1513 /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D PNG_CONFIGURE_LIBPNG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"png15_static.dir\Debug\\" /Fd"C:/programming/python/pyflat/c/lpng1513/build/Debug/libpng15_staticd.pdb" /Gd /TC /analyze- /errorReport:prompt ..\png.c ..\pngerror.c ..\pngget.c ..\pngmem.c ..\pngpread.c ..\pngread.c ..\pngrio.c ..\pngrtran.c ..\pngrutil.c ..\pngset.c ..\pngtrans.c ..\pngwio.c ..\pngwrite.c ..\pngwtran.c ..\pngwutil.c  /Zm1000 
+         png.c
+         pngerror.c
+         pngget.c
+         pngmem.c
+         pngpread.c
+         pngread.c
+         pngrio.c
+         pngrtran.c
+         pngrutil.c
+         pngset.c
+         pngtrans.c
+         pngwio.c
+         pngwrite.c
+         pngwtran.c
+         pngwutil.c
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\programming\python\pyflat\c\lpng1513\build\Debug\libpng15_staticd.lib" /NOLOGO png15_static.dir\Debug\png.obj
+         png15_static.dir\Debug\pngerror.obj
+         png15_static.dir\Debug\pngget.obj
+         png15_static.dir\Debug\pngmem.obj
+         png15_static.dir\Debug\pngpread.obj
+         png15_static.dir\Debug\pngread.obj
+         png15_static.dir\Debug\pngrio.obj
+         png15_static.dir\Debug\pngrtran.obj
+         png15_static.dir\Debug\pngrutil.obj
+         png15_static.dir\Debug\pngset.obj
+         png15_static.dir\Debug\pngtrans.obj
+         png15_static.dir\Debug\pngwio.obj
+         png15_static.dir\Debug\pngwrite.obj
+         png15_static.dir\Debug\pngwtran.obj
+         png15_static.dir\Debug\pngwutil.obj
+         png15_static.vcxproj -> C:\programming\python\pyflat\c\lpng1513\build\Debug\libpng15_staticd.lib
+       FinalizeBuildStatus:
+         Deleting file "png15_static.dir\Debug\png15_static.unsuccessfulbuild".
+         Touching "png15_static.dir\Debug\png15_static.lastbuildstate".
+     1>Done Building Project "C:\programming\python\pyflat\c\lpng1513\build\png15_static.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.25

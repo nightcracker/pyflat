@@ -1,0 +1,30 @@
+﻿Build started 29-10-2012 16:34:00.
+     1>Project "C:\programming\python\pyflat\c\zlib-1.2.7\build\zlib.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "zlib.dir\Debug\zlib.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Building Custom Rule C:/programming/python/pyflat/c/zlib-1.2.7/CMakeLists.txt
+         CMake does not need to re-run because C:\programming\python\pyflat\c\zlib-1.2.7\build\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:/programming/python/pyflat/c/zlib-1.2.7" /I"C:/programming/python/pyflat/c/zlib-1.2.7/build" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D NO_FSEEKO /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D "CMAKE_INTDIR=\"Debug\"" /D ZLIB_DLL /D _WINDLL /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"zlib.dir\Debug\\" /Fd"C:/programming/python/pyflat/c/zlib-1.2.7/build/Debug/zlibd.pdb" /Gd /TC /analyze- /errorReport:prompt ..\adler32.c ..\compress.c ..\crc32.c ..\deflate.c ..\gzclose.c ..\gzlib.c ..\gzread.c ..\gzwrite.c ..\inflate.c ..\infback.c ..\inftrees.c ..\inffast.c ..\trees.c ..\uncompr.c ..\zutil.c  /Zm1000 
+         adler32.c
+         compress.c
+         crc32.c
+         deflate.c
+         gzclose.c
+         gzlib.c
+         gzread.c
+         gzwrite.c
+         inflate.c
+         infback.c
+         inftrees.c
+         inffast.c
+         trees.c
+         uncompr.c
+         zutil.c
+         Generating Code...
+     1>Done Building Project "C:\programming\python\pyflat\c\zlib-1.2.7\build\zlib.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.22

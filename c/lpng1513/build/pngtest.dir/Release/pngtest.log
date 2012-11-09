@@ -1,0 +1,21 @@
+﻿Build started 29-10-2012 16:49:41.
+     1>Project "C:\programming\python\pyflat\c\lpng1513\build\pngtest.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "pngtest.dir\Release\pngtest.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         All outputs are up-to-date.
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\programming\python\pyflat\c\lpng1513\build\Release\pngtest.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib Release\libpng15.lib "C:\programming\python\pyflat\c\zlib-1.2.7\build\Release\zlib.lib" /MANIFEST /ManifestFile:"pngtest.dir\Release\pngtest.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:/programming/python/pyflat/c/lpng1513/build/Release/pngtest.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/programming/python/pyflat/c/lpng1513/build/Release/pngtest.lib" /MACHINE:X86 pngtest.dir\Release\pngtest.obj  /machine:X86 
+         pngtest.vcxproj -> C:\programming\python\pyflat\c\lpng1513\build\Release\pngtest.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\programming\python\pyflat\c\lpng1513\build\Release\pngtest.exe;#1" /manifest pngtest.dir\Release\pngtest.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "pngtest.dir\Release\pngtest.unsuccessfulbuild".
+         Touching "pngtest.dir\Release\pngtest.lastbuildstate".
+     1>Done Building Project "C:\programming\python\pyflat\c\lpng1513\build\pngtest.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.25
